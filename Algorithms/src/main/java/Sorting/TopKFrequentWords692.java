@@ -18,8 +18,9 @@ public class TopKFrequentWords692 {
         }
 
         List<String>[] buckets = new ArrayList[words.length];
-        for (int i = 0; i < words.length; i++) buckets[i] = new ArrayList<>();
-
+        for (int i = 0; i < words.length; i++) {
+            buckets[i] = new ArrayList<>();
+        }
         for (String w : count.keySet()) {
             buckets[count.get(w)].add(w);
         }
